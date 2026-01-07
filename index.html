@@ -21,7 +21,7 @@
           <label class="block text-sm font-medium mb-1" for="fullName">Full Name</label>
           <input type="text" placeholder="John Doe"
             class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300" name="fullName"
-            id="fullName"  />
+            id="fullName" />
         </div>
 
         <div>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="md:col-span-3 flex justify-end">
-          <button  class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+          <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
             Add User
           </button>
         </div>
@@ -49,14 +49,20 @@
     <!-- TABLE -->
     <div class="bg-white rounded-xl shadow p-6">
       <h2 class="text-xl font-semibold mb-4">Users</h2>
+      <div class="flex justify-between items-center mb-5">
+        <h2 class="text-xl font-semibold">Total Result : <span id="totalResult">35</span></h2>
+        <input type="text" id="searchInput"
+          class="w-70 border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300"
+          placeholder="search....">
+      </div>
 
       <div class="overflow-x-auto">
         <table class="w-full border-collapse">
           <thead>
             <tr class="bg-gray-100 text-left text-sm">
               <th class="p-3 border">ID</th>
-              <th class="p-3 border">Full Name</th>
-              <th class="p-3 border">Email</th>
+              <th class="sortBtn p-3 border" id="fullName">Full Name</th>
+              <th class="sortBtn p-3 border" id="email">Email</th>
               <th class="p-3 border">Password</th>
               <th class="p-3 border text-center">Actions</th>
             </tr>
@@ -65,6 +71,7 @@
           <tbody class="text-sm"></tbody>
         </table>
       </div>
+      <div class="flex justify-center gap-4 my-5" id="btns"></div>
     </div>
 
   </div>
